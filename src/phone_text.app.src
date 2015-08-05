@@ -1,0 +1,17 @@
+{application, phone_text, [
+	{description, ""},
+	{vsn, "0.1.0"},
+	{id, "git"},
+	{modules, []},
+	{registered, []},
+	{applications, [
+		kernel,
+		stdlib,
+		crypto,
+		ranch,
+		cowlib,
+		cowboy
+	]},
+	{mod, {phone_text_app, []}},
+	{env, []}
+]}.
