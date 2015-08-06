@@ -13,7 +13,7 @@ Provides the combinations of the text and numbers you entered same as our mobile
 
 Enter your words or numbers to get the combinations
 
-####for any suggestions
-you can mail me at raju.chittimallea@gmail.com
+####for any suggestions or ideas
+my email id : raju.chittimallea@gmail.com
 
 
