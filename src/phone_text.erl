@@ -2,7 +2,6 @@
 -export([get_phone_text/1,get_text_num/1]).
 -define(NUMBERS,[{"1",""},{"2","abc"},{"3","def"},{"4","ghi"},{"5","jkl"},
 		{"6","mno"},{"7","pqrs"},{"8","tuv"},{"9","wxyz"},{"0",""}]).
--define(PRIV_DIR,"/home/raju/Documents/raju/phoneToText/priv").
 
 get_phone_text(Number) ->
 	case check_data(Number,"number") of
@@ -10,7 +9,7 @@ get_phone_text(Number) ->
 			{error,Reason};
 		ok->
 			ValueList=get_value_from_numlist(binary_to_list(Number),[]),
-			{ok,Bin} = file:read_file(filename:join(?PRIV_DIR,"linuxwords.txt")),
+			{ok,Bin} = file:read_file(filename:join(code:priv_dir(phone_text),"linuxwords.txt")),
 			StringListConvLower = [string: to_lower(X) ||X<- string:tokens(erlang:binary_to_list(Bin),"\n")],
 			get_words(ValueList,StringListConvLower,[])
 	end.
